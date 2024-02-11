@@ -327,11 +327,14 @@ class App {
         let contest  = await App.get('contest', key);
         if (contest) {
             let winners = [];
-            let predictions = await App.list('prediction', {contestId:key});
-            predictions.forEach(pred=>{
-                if (pred.prediction === result) winners.push(pred);
+            let predictions = await App.list('prediction');
+            predictions.forEach(doc=>{
+                let pred = doc.data;
+                if (pred.contestId === key && pred.prediction === result) 
+                    winners.push(pred);
             });
             let count = winners.length;
+            alert(count);
             let payout = Math.floor(contest.buyin * contest.bets / count);
             for (let i=0; i<count; i++) {
                 let wallet = await App.get('wallet', winners[i].userId);
