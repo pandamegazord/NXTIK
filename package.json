@@ -1,0 +1,14 @@
+{
+  "name": "nxtik",
+  "version": "1.0.0",
+  "description": "IC price prediction game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Roger Ramia",
+  "license": "ISC",
+  "dependencies": {
+    "@junobuild/core": "^0.0.44"
+  }
+}

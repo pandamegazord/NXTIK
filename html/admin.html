@@ -1,0 +1,57 @@
+
+<div class="pure-g" style="width:90%; margin:auto">
+    <div class="pure-u-lg-1-3">
+        <h1>Admin</h1>
+        <form id="contest" data-bind="createContests" class="pure-form pure-form-aligned" >
+            <fieldset>
+                <div class="pure-control-group">
+                    <label for="market">Market:</label>
+                    <input type="text" name="market" id="market" placeholder="Market (BTC-USD)" value="BTC-USD" required=true/>
+                </div>
+                <div class="pure-control-group">
+                    <label for="buyin">Buy In:</label>
+                    <input type="text" name="buyin" id="buyin" placeholder="Buy In Amount" value=5 required=true />
+                </div>
+                <div class="pure-control-group">
+                    <label for="duration">Duration:</label>
+                    <input type="text" name="duration" id="duration" placeholder="Duration" value="1 Day" required=true/>
+                </div>
+                <div class="pure-control-group">
+                    <label for="start">Start Time:</label>
+                    <input type="text" name="start" id="start" placeholder="Start Time" value="2024-02-10" required=true/>
+                </div>
+                <div class="pure-control-group">
+                    <label for="end">End Time:</label>
+                    <input type="text" name="end" id="end" placeholder="End Time" value="2024-02-11" required=true/>
+                </div>
+                <div class="pure-controls" id="adminSubmit">
+                    <button class="pure-button pure-button-primary" type="submit">Add Contests</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+<div class="pure-g" style="width:90%; margin:auto">
+    <div class="pure-u-lg-1">
+        <div class="table-fixed-head">
+            <table class="pure-table pure-table-horizontal contest-table">
+                <thead>
+                    <tr>
+                        <th>Buyin</th>
+                        <th>Market</th>
+                        <th>Duration</th>
+                        <th>Total Bets</th>
+                        <th>Update</th>
+                    </tr>
+                </thead>
+                <tbody id="contest-body">
+                    <tr>
+                        <td colspan="5">No Contests Found</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+        
